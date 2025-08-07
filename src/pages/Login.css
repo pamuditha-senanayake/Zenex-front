@@ -1,0 +1,162 @@
+/* Import a modern font from Google Fonts */
+/* You would typically add this to your public/index.html <head> or your main App.css */
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap'); */
+
+
+/* --- General Body/Page Styling --- */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif; /* Using Poppins for a modern look */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: linear-gradient(135deg, #f0f2f5 0%, #e0e6ed 100%); /* Soft, subtle gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+    padding: 20px; /* Add some padding for smaller screens */
+    box-sizing: border-box; /* Ensures padding is included in element's total width/height */
+}
+
+/* --- Login Page Container --- */
+.login-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 500px; /* Limits the max width of the login card */
+}
+
+/* --- Login Form Styling --- */
+.login-form {
+    background-color: #ffffff;
+    padding: 45px;
+    border-radius: 20px; /* More rounded corners for a softer feel */
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15); /* Prominent but soft shadow for depth */
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box; /* Important for padding calculations */
+    animation: fadeIn 0.8s ease-out forwards; /* Simple fade-in animation on load */
+    opacity: 0; /* Start hidden for animation */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Heading Styling --- */
+.login-form h2 {
+    color: #333333;
+    margin-bottom: 35px;
+    font-size: 2.2em; /* Slightly larger heading */
+    font-weight: 700; /* Bolder font weight */
+    letter-spacing: -0.5px; /* Tighter letter spacing */
+}
+
+/* --- Input Group for spacing --- */
+.input-group {
+    margin-bottom: 25px; /* Consistent spacing between input fields */
+}
+
+/* --- Input Fields Styling --- */
+.login-form input {
+    width: calc(100% - 40px); /* Full width minus padding */
+    padding: 16px 20px;
+    border: 1px solid #e0e0e0; /* Light gray border */
+    border-radius: 10px; /* Slightly rounded inputs */
+    font-size: 1.05em;
+    color: #333333;
+    outline: none; /* Remove default outline */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.login-form input::placeholder {
+    color: #a0a0a0; /* Lighter placeholder text */
+}
+
+.login-form input:focus {
+    border-color: #6a0dad; /* A vibrant purple for focus state */
+    box-shadow: 0 0 0 4px rgba(106, 13, 173, 0.15); /* Soft glow on focus */
+}
+
+/* --- Login Button Styling --- */
+.login-button {
+    width: 100%;
+    padding: 17px;
+    background: linear-gradient(45deg, #6a0dad, #8a2be2); /* Eye-catching purple gradient */
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.15em;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; /* Smooth transitions */
+    margin-top: 10px; /* Space above the button */
+}
+
+.login-button:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 12px 25px rgba(106, 13, 173, 0.3); /* Stronger shadow on hover */
+    background: linear-gradient(45deg, #8a2be2, #6a0dad); /* Subtle gradient reverse on hover */
+}
+
+.login-button:active {
+    transform: translateY(-2px); /* Slight press effect when clicked */
+    box-shadow: 0 5px 15px rgba(106, 13, 173, 0.2);
+}
+
+/* --- Register Text and Link Styling --- */
+.register-text {
+    margin-top: 30px;
+    color: #666666;
+    font-size: 0.98em;
+}
+
+.register-link {
+    color: #6a0dad; /* Match link color to the accent purple */
+    text-decoration: none; /* Remove default underline */
+    font-weight: 600;
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transitions */
+}
+
+.register-link:hover {
+    color: #8a2be2; /* Darker purple on hover */
+    text-decoration: underline; /* Add underline on hover for clarity */
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 600px) {
+    .login-form {
+        padding: 30px; /* Reduce padding on smaller screens */
+        margin: 15px; /* Add margin to prevent sticking to screen edges */
+        border-radius: 15px; /* Slightly less rounded */
+    }
+
+    .login-form h2 {
+        font-size: 1.8em;
+        margin-bottom: 25px;
+    }
+
+    .login-form input {
+        padding: 14px 18px;
+        font-size: 1em;
+    }
+
+    .login-button {
+        padding: 15px;
+        font-size: 1.05em;
+    }
+
+    .register-text {
+        font-size: 0.9em;
+    }
+}
