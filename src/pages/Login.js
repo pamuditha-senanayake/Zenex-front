@@ -10,7 +10,11 @@ function Login() {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:3003/login', { username, password }, { withCredentials: true });
+            await axios.post(
+                `${process.env.REACT_APP_API_URL}/login`,
+                { username, password },
+                { withCredentials: true }
+            );
             alert('Login successful!');
             navigate('/home');
         } catch (error) {
