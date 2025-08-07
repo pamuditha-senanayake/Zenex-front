@@ -53,9 +53,9 @@ function Login() {
                     Login
                 </button>
 
-                {/*<p className="register-text">*/}
-                {/*    Don't have an account? <Link to="/register" className="register-link">Register here</Link>*/}
-                {/*</p>*/}
+                <p className="register-text">
+                    Don't have an account? <Link to="/register" className="register-link">Register here</Link>
+                </p>
             </form>
         </div>
     );
