@@ -1,0 +1,314 @@
+/* src/Prompts.module.css */
+body{
+    padding: 0;
+}
+/* Base Styles (Copied from Home.module.css for consistency) */
+.promptsContainer {
+    background-color: #000; /* Black background */
+    color: #fff; /* Default text color */
+    font-family: 'Orbitron', sans-serif; /* Orbitron font */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Yellow Glow Effect (Copied from Home.module.css) */
+.yellowGlow {
+    color: #FFFF00; /* Bright yellow */
+    text-shadow: 0 0 5px #FFFF00, 0 0 10px #FFFF00, 0 0 15px rgba(255, 255, 0, 0.5); /* Subtle glow */
+}
+
+/* Navigation Bar (Copied from Home.module.css) */
+.navbar {
+    width: 100%;
+    background-color: #000;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.navBrand {
+    font-size: 1.8em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #fff;
+    margin: 0;
+}
+
+.navbarNav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+.navLink {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.navLink::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #FFFF00;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.navLink:hover {
+    color: #FFFF00;
+    background-color: rgba(255, 255, 0, 0.1);
+    text-shadow: 0 0 3px #FFFF00;
+}
+
+.navLink:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.activeNavLink { /* Style for the currently active nav link */
+    color: #FFFF00 !important; /* Force yellow */
+    text-shadow: 0 0 5px #FFFF00 !important;
+    border-bottom: 2px solid #FFFF00;
+}
+
+/* Header (Copied from Home.module.css) */
+.header {
+    text-align: center;
+    padding: 60px 20px 40px;
+    animation: fadeIn 1s ease-out;
+}
+
+.headerTitle {
+    font-size: 3.5em;
+    color: #FFFF00;
+    text-shadow: 0 0 10px rgba(255, 255, 0, 0.7);
+    margin-bottom: 10px;
+}
+
+.headerSubtitle {
+    font-size: 1.2em;
+    color: #ccc;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Main Content Area */
+.mainContent {
+    flex-grow: 1;
+    width: 100%;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Space between prompt steps */
+}
+
+/* Individual Prompt Step */
+.promptStep {
+    background-color: rgba(255, 255, 0, 0.03); /* Very subtle transparent yellow */
+    border: 1px solid #222; /* Darker border */
+    border-left: 5px solid #FFFF00; /* Distinct yellow left border */
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease-out;
+}
+
+.promptStep:hover {
+    border-color: #FFFF00; /* Full yellow border on hover */
+    background-color: rgba(255, 255, 0, 0.08); /* More intense fill on hover */
+    box-shadow: 0 0 15px rgba(255, 255, 0, 0.3); /* Enhanced glow */
+}
+
+.stepTitle {
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #fff; /* Default color, glow on yellow span */
+}
+
+.stepDescription {
+    font-size: 1em;
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+/* Code Block Area */
+.codeBlockContainer {
+    position: relative; /* For positioning the copy button */
+    background-color: #1a1a1a; /* Darker background for code */
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 20px;
+    overflow: hidden; /* For rounded corners on content */
+    margin-top: 15px;
+}
+
+.codeBlock {
+    margin: 0; /* Remove default pre margin */
+    padding-right: 60px; /* Space for the copy button */
+    color: #E0E0E0; /* Light grey text for code */
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace; /* Monospaced font for code */
+    font-size: 0.9em;
+    line-height: 1.5;
+    white-space: pre-wrap; /* Preserve whitespace and wrap long lines */
+    word-break: break-word; /* Break words if they are too long */
+}
+
+.copyButton {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: transparent;
+    border: 1px solid #FFFF00;
+    color: #FFFF00;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 0 5px rgba(255, 255, 0, 0.3);
+}
+
+.copyButton:hover {
+    background-color: #FFFF00;
+    color: #000;
+    text-shadow: none;
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.7);
+    transform: translateY(-2px);
+}
+
+.copyButton:active {
+    transform: translateY(0);
+    box-shadow: 0 0 5px rgba(255, 255, 0, 0.5);
+}
+
+/* Footer (Copied from Home.module.css) */
+.footer {
+    width: 100%;
+    padding: 20px 40px;
+    text-align: center;
+    color: #888;
+    font-size: 0.9em;
+    border-top: 1px solid #333;
+    margin-top: auto;
+}
+
+/* Keyframe Animations (Copied from Home.module.css) */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .headerTitle {
+        font-size: 2.8em;
+    }
+    .mainContent {
+        max-width: 800px;
+    }
+    .stepTitle {
+        font-size: 1.6em;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+    .navbarNav {
+        margin-top: 15px;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .navBrand {
+        font-size: 1.5em;
+    }
+    .headerTitle {
+        font-size: 2.2em;
+    }
+    .headerSubtitle {
+        font-size: 1em;
+    }
+    .mainContent {
+        padding: 20px 15px;
+        gap: 20px;
+    }
+    .promptStep {
+        padding: 20px;
+    }
+    .stepTitle {
+        font-size: 1.4em;
+    }
+    .stepDescription {
+        font-size: 0.9em;
+    }
+    .codeBlock {
+        font-size: 0.85em;
+    }
+    .copyButton {
+        font-size: 0.8em;
+        padding: 6px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navLink {
+        font-size: 0.9em;
+        padding: 5px 10px;
+    }
+    .headerTitle {
+        font-size: 1.8em;
+    }
+    .headerSubtitle {
+        font-size: 0.9em;
+    }
+    .mainContent {
+        padding: 15px 10px;
+    }
+    .promptStep {
+        padding: 15px;
+    }
+    .stepTitle {
+        font-size: 1.2em;
+    }
+    .codeBlockContainer {
+        padding: 15px;
+        padding-right: 50px; /* Adjust for smaller button */
+    }
+    .copyButton {
+        top: 10px;
+        right: 10px;
+        padding: 5px 8px;
+    }
+    .footer {
+        font-size: 0.8em;
+        padding: 15px 20px;
+    }
+}
