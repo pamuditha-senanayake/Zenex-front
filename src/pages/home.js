@@ -10,7 +10,7 @@ const siteLinks = [
     { name: 'docs', url: 'https://www.docs.new' },
     { name: 'sheets', url: 'https:/s/www.sheets.new' },
     { name: 'Lec 3', url: '/Prompts' },
-    { name: 'Stack Overflow', url: 'https://stackoverflow.com' },
+    { name: 'AI studio', url: 'https://aistudio.google.com' },
     { name: 'MDN Web Docs', url: 'https://developer.mozilla.org/en-US/' },
     { name: 'ChatGPT', url: 'https://chat.openai.com/' },
     { name: 'Docs.new', url: 'https://docs.new' },

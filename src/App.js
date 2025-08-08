@@ -8,6 +8,7 @@ import Matrix from './pages/matrix';
 import NavBar from './pages/NavBar';
 import MQ from './pages/PhotoMarquee';
 import NavBarEisenhowerMatrix from './pages/EisenhowerMatrix';
+import Human6 from './pages/human_six/human6';
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
                 <Route path="/EisenhowerMatrix" element={<NavBarEisenhowerMatrix />} />
                 <Route path="/NavBar" element={<NavBar />} />
                 <Route path="/MQ" element={<MQ />} />
+                <Route path="/Human6" element={<Human6 />} />
             </Routes>
         </Router>
     );

@@ -35,10 +35,10 @@ const NavBar = () => {
                 </li>
                 <li>
                     <Link
-                        to="/settings"
+                        to="/human6"
                         className={`${styles.navLink} ${location.pathname === '/settings' ? styles.activeNavLink : ''}`}
                     >
-                        Settings
+                        Human 6.0
                     </Link>
                 </li>
                 <li>
