@@ -5,29 +5,29 @@ import {Link} from "react-router-dom"; // Import CSS Module
 
 const siteLinks = [
     { name: 'docs', url: 'https://www.docs.new' },
-    { name: 'sheets', url: 'https://www.sheets.new' },
-    { name: 'AI Prompts Hub', url: '/prompts' },
+    { name: 'sheets', url: 'https:/s/www.sheets.new' },
+    { name: 'Lec 3', url: '/Prompts' },
     { name: 'Stack Overflow', url: 'https://stackoverflow.com' },
     { name: 'MDN Web Docs', url: 'https://developer.mozilla.org/en-US/' },
     { name: 'ChatGPT', url: 'https://chat.openai.com/' },
     { name: 'Docs.new', url: 'https://docs.new' },
     { name: 'Sheets.new', url: 'https://sheets.new' },
     { name: 'Figma', url: 'https://www.figma.com/' },
-    { name: 'Notion', url: 'https://www.notion.so/' },
-    { name: 'VS Code Online', url: 'https://vscode.dev/' },
-    { name: 'Canva', url: 'https://www.canva.com/' },
-    { name: 'Twitter (X)', url: 'https://twitter.com/' },
-    { name: 'LinkedIn', url: 'https://www.linkedin.com/' },
-    { name: 'Wikipedia', url: 'https://www.wikipedia.org/' },
-    { name: 'Reddit', url: 'https://www.reddit.com/' },
-    { name: 'Netlify', url: 'https://www.netlify.com/' },
-    { name: 'Vercel', url: 'https://vercel.com/' },
-    { name: 'Stripe Dev', url: 'https://dashboard.stripe.com/test/dashboard' },
-    { name: 'AWS Console', url: 'https://aws.amazon.com/console/' },
-    { name: 'Google Cloud', url: 'https://console.cloud.google.com/' },
-    { name: 'Azure Portal', url: 'https://portal.azure.com/' },
-    { name: 'LeetCode', url: 'https://leetcode.com/' },
-    { name: 'HackerRank', url: 'https://www.hackerrank.com/' },
+    { name: 'Notion', url: 'https://www.notion.so/' }
+    // { name: 'VS Code Online', url: 'https://vscode.dev/' },
+    // { name: 'Canva', url: 'https://www.canva.com/' },
+    // { name: 'Twitter (X)', url: 'https://twitter.com/' },
+    // { name: 'LinkedIn', url: 'https://www.linkedin.com/' },
+    // { name: 'Wikipedia', url: 'https://www.wikipedia.org/' },
+    // { name: 'Reddit', url: 'https://www.reddit.com/' },
+    // { name: 'Netlify', url: 'https://www.netlify.com/' },
+    // { name: 'Vercel', url: 'https://vercel.com/' },
+    // { name: 'Stripe Dev', url: 'https://dashboard.stripe.com/test/dashboard' },
+    // { name: 'AWS Console', url: 'https://aws.amazon.com/console/' },
+    // { name: 'Google Cloud', url: 'https://console.cloud.google.com/' },
+    // { name: 'Azure Portal', url: 'https://portal.azure.com/' },
+    // { name: 'LeetCode', url: 'https://leetcode.com/' },
+    // { name: 'HackerRank', url: 'https://www.hackerrank.com/' },
 ];
 
 function Home() {
@@ -52,8 +52,9 @@ function Home() {
             </nav>
 
             <header className={styles.header}>
-            <h2 className={styles.headerTitle}>Welcome to the ZENEX.AI</h2>
-                <p className={styles.headerSubtitle}>Direct access to digital ecosystem.</p>
+                <p className={styles.headerSubtitle}>[Fast access to customized tools by Pamuditha]</p>
+                <h2 className={styles.headerTitle}>Welcome to the ZENEX.AI</h2>
+
             </header>
 
             <main className={styles.mainContent}>
@@ -71,6 +72,8 @@ function Home() {
                     ))}
                 </div>
             </main>
+
+
 
             <footer className={styles.footer}>
                 <p>&copy; 2025 PAMUDITHA. All rights reserved. <span className={styles.yellowGlow}>v1.0.0</span></p>
