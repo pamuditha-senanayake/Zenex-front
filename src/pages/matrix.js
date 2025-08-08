@@ -1,7 +1,7 @@
 import React from 'react';
 import NavBar from './NavBar';
 import EisenhowerMatrix from './EisenhowerMatrix';
-import styles from './matrix.css';
+
 
 const DashboardPage = () => {
     return (
