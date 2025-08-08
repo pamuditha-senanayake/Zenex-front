@@ -7,7 +7,7 @@ body{
     background-color: #000; /* Black background */
     color: #fff; /* Default text color */
     font-family: 'Orbitron', sans-serif; /* Orbitron font */
-    min-height: 100vh;
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -94,9 +94,9 @@ body{
 /* Header */
 .header {
 
-    width: 100%;
+    width: 80%;
     margin: 0; /* no centering margin */
-    padding: 60px 20px 16px 140px;
+    padding: 60px 20px 128px ;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -137,11 +137,12 @@ body{
 /* Main Content and Grid */
 .mainContent {
     flex-grow: 1; /* Allows content to take available space */
-    width: 90%;
+
     max-width: 1600px; /* Limit overall width */
     /*padding: 20px;*/
     display: flex;
     justify-content: center;
+    width: 80%;
     align-items: flex-start; /* Align grid to top if not filling height */
 }
 
@@ -150,8 +151,7 @@ body{
     grid-template-columns: repeat(8, 1fr); /* 8 columns */
     grid-template-rows: repeat(3, 1fr); /* 3 rows */
     gap: 18px; /* Spacing between boxes */
-    width: 100%;
-    padding: 20px;
+
     margin: 0 auto; /* Center the grid */
 }
 
@@ -320,4 +320,12 @@ body{
         font-size: 0.8em;
         padding: 15px 20px;
     }
+}
+
+
+.photoMarqueeSection {
+    margin-top: 2rem;  /* space above marquee */
+    width: 80%;
+    margin-bottom: 128px;
+    /* optionally add background, padding, or center alignment */
 }

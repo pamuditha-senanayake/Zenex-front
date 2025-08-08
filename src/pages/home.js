@@ -1,7 +1,10 @@
-// src/Home.js
+
 import React from 'react';
 import styles from './Home.module.css';
 import {Link} from "react-router-dom"; // Import CSS Module
+import PhotoMarqueePingPong from './PhotoMarquee';
+
+
 
 const siteLinks = [
     { name: 'docs', url: 'https://www.docs.new' },
@@ -41,9 +44,9 @@ function Home() {
                 <h1 className={styles.navBrand}>ZENEX </h1>
                 <ul className={styles.navbarNav}>
 
-                    <li><Link to="/home" className={`${styles.navLink} ${styles.activeNavLink}`}>AI Prompts</Link>
+                    <li><Link to="/home" className={`${styles.navLink} ${styles.activeNavLink}`}>Dashboard</Link>
                     </li>
-                    <li><Link to="/Prompts" className={styles.navLink}>Dashboard</Link></li>
+                    <li><Link to="/Prompts" className={styles.navLink}>Prompts</Link></li>
                     {/* Active state */}
                     <li><Link to="/Matrix" className={styles.navLink}>Matrix</Link></li>
                     <li><Link to="/settings" className={styles.navLink}>Settings</Link></li>
@@ -52,7 +55,7 @@ function Home() {
             </nav>
 
             <header className={styles.header}>
-                <p className={styles.headerSubtitle}>[Fast access to customized tools by Pamuditha]</p>
+                <p className={styles.headerSubtitle}>[Fast access to tools by Pamuditha]</p>
                 <h2 className={styles.headerTitle}>Welcome to the ZENEX.AI</h2>
 
             </header>
@@ -73,8 +76,21 @@ function Home() {
                 </div>
             </main>
 
+            <section className={styles.photoMarqueeSection}>
+                <header className={styles.header}>
+                    <p className={styles.headerSubtitle}>[A glimpse of Pamuditha’s moments]</p>
+                    <h2 className={styles.headerTitle}>Photo Gallery Showcase</h2>
+                </header>
+                <PhotoMarqueePingPong/>
+            </section>
 
+            <section className={styles.photoMarqueeSection}>
+                <header className={styles.header}>
+                    <p className={styles.headerSubtitle}>[A glimpse of Pamuditha’s moments]</p>
+                    <h2 className={styles.headerTitle}>Photo Gallery Showcase</h2>
+                </header>
 
+            </section>
             <footer className={styles.footer}>
                 <p>&copy; 2025 PAMUDITHA. All rights reserved. <span className={styles.yellowGlow}>v1.0.0</span></p>
             </footer>

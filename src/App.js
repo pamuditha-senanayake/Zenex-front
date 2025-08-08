@@ -6,6 +6,7 @@ import Home from './pages/home';
 import Prompts from './pages/Prompts';
 import Matrix from './pages/matrix';
 import NavBar from './pages/NavBar';
+import MQ from './pages/PhotoMarquee';
 import NavBarEisenhowerMatrix from './pages/EisenhowerMatrix';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
                 <Route path="/Matrix" element={<Matrix />} />
                 <Route path="/EisenhowerMatrix" element={<NavBarEisenhowerMatrix />} />
                 <Route path="/NavBar" element={<NavBar />} />
+                <Route path="/MQ" element={<MQ />} />
             </Routes>
         </Router>
     );

@@ -14,7 +14,7 @@ const NavBar = () => {
                         to="/home"
                         className={`${styles.navLink} ${location.pathname === '/home' ? styles.activeNavLink : ''}`}
                     >
-                        AI Prompts
+                        Dashboard
                     </Link>
                 </li>
                 <li>
@@ -22,7 +22,7 @@ const NavBar = () => {
                         to="/Prompts"
                         className={`${styles.navLink} ${location.pathname === '/Prompts' ? styles.activeNavLink : ''}`}
                     >
-                        Dashboard
+                        Prompts
                     </Link>
                 </li>
                 <li>
