@@ -79,7 +79,7 @@ export default function PhotoMarqueePingPong() {
                     <img
                         key={i}
                         src={src}
-                        alt={`Photo ${i + 1}`}
+                        alt={`Pamuditha ${i + 1}`}
                         style={{
                             width: 400,
                             height: 500,
