@@ -16,7 +16,7 @@ function Login() {
                 { username, password },
                 { withCredentials: true }
             );
-            alert('Login successful!');
+            // alert('Login successful!');
             navigate('/home');
         } catch (error) {
             // Check if error.response exists and has data/error message
@@ -53,9 +53,9 @@ function Login() {
                     Login
                 </button>
 
-                <p className="register-text">
-                    Don't have an account? <Link to="/register" className="register-link">Register here</Link>
-                </p>
+                {/*<p className="register-text">*/}
+                {/*    Don't have an account? <Link to="/register" className="register-link">Register here</Link>*/}
+                {/*</p>*/}
             </form>
         </div>
     );

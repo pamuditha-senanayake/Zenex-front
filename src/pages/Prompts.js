@@ -69,11 +69,11 @@ function Prompts() {
         <div className={styles.promptsContainer}>
             {/* Replicated Navbar from Home.js for consistency */}
             <nav className={styles.navbar}>
-                <h1 className={styles.navBrand}>ZENEX.AI </h1>
+                <h1 className={styles.navBrand}>ZENEX </h1>
                 <ul className={styles.navbarNav}>
                     <li><Link to="/home" className={`${styles.navLink} ${styles.activeNavLink}`}>AI Prompts</Link></li> {/* Active state */}
                     <li><Link to="/Prompts" className={styles.navLink}>Dashboard</Link></li>
-                    <li><Link to="/tools" className={styles.navLink}>AI Tools</Link></li>
+                    <li><Link to="/Matrix" className={styles.navLink}>Matrix</Link></li>
                     <li><Link to="/settings" className={styles.navLink}>Settings</Link></li>
                     <li><Link to="/profile" className={styles.navLink}>Profile</Link></li>
                 </ul>

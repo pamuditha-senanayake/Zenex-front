@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&family=Orbitron&display=swap');
+
+.matrix-container {
+    background-color: #000000;
+    color: #FFF;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 100;
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.matrix-title {
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    user-select: none;
+}
+
+.matrix-form {
+    margin-bottom: 2rem;
+    max-width: 600px;
+    width: 100%;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+.matrix-label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 1rem;
+    user-select: none;
+}
+
+.full-width {
+    grid-column: span 2;
+}
+
+.matrix-input, .matrix-select {
+    margin-top: 0.25rem;
+    padding: 0.5rem;
+    font-family: 'Manrope', sans-serif;
+    font-size: 1rem;
+    background-color: #111;
+    border: 1px solid #FFF;
+    color: #FFF;
+    border-radius: 4px;
+    outline: none;
+}
+
+.matrix-input:focus, .matrix-select:focus {
+    border-color: #FFF;
+
+}
+
+.matrix-button {
+    grid-column: span 2;
+    padding: 0.75rem;
+    background-color: #FFF;
+    color: #000000;
+    font-weight: 700;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s ease;
+}
+
+.matrix-button:hover {
+    background-color: #FFEA00;
+}
+
+.matrix-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+    width: 100%;
+    max-width: 900px;
+    font-family: 'Manrope', sans-serif;
+}
+
+.matrix-quadrant {
+    border: 1px solid #444; /* thin gray border by default */
+    border-radius: 10px;
+    padding: 1rem;
+    min-height: 180px;
+    background-color: #111;
+    overflow-y: auto;
+    transition: border-color 0.3s ease;
+}
+
+.matrix-quadrant:hover {
+    border-color: #FFD700; /* yellow border only on hover */
+}
+
+.quadrant-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+    border-bottom: 1px solid #FFF;
+    padding-bottom: 0.3rem;
+    user-select: none;
+}
+/* Add this to EisenhowerMatrix.css */
+.delete-button {
+    margin-left: 10px;
+    padding: 2px 6px;
+    cursor: pointer;
+    background-color: #FFF;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 0.8rem;
+}
+
+
+.quadrant-empty {
+    font-style: italic;
+    color: #FFF;
+    user-select: none;
+}
+
+.task-list {
+    padding-left: 1.25rem;
+    user-select: none;
+}
+
+.task-item {
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    color: #FFF;
+    user-select: none;
+    transition: color 0.2s ease;
+}
+
+.task-item:hover {
+    color: #FFFF33;
+}
+
+.task-name {
+    font-weight: 700;
+}

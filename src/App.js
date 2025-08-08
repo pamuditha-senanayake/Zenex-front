@@ -4,6 +4,9 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Home from './pages/home';
 import Prompts from './pages/Prompts';
+import Matrix from './pages/matrix';
+import NavBar from './pages/NavBar';
+import NavBarEisenhowerMatrix from './pages/EisenhowerMatrix';
 
 function App() {
     return (
@@ -13,6 +16,9 @@ function App() {
                 <Route path="/register" element={<Register />} />
                 <Route path="/home" element={<Home />} />
                 <Route path="/prompts" element={<Prompts />} />
+                <Route path="/Matrix" element={<Matrix />} />
+                <Route path="/EisenhowerMatrix" element={<NavBarEisenhowerMatrix />} />
+                <Route path="/NavBar" element={<NavBar />} />
             </Routes>
         </Router>
     );
