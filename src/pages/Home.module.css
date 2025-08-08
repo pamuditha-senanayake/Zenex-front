@@ -103,6 +103,10 @@ body{
     text-align: left;
     animation: fadeIn 1s ease-out;
 }
+.activeNavLink {
+    font-weight: bold;
+    border-bottom: 2px solid #FFF;
+}
 
 @media (max-width: 768px) {
     .header {

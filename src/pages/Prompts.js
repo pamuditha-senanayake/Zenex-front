@@ -71,8 +71,8 @@ function Prompts() {
             <nav className={styles.navbar}>
                 <h1 className={styles.navBrand}>ZENEX </h1>
                 <ul className={styles.navbarNav}>
-                    <li><Link to="/home" className={`${styles.navLink} ${styles.activeNavLink}`}>AI Prompts</Link></li> {/* Active state */}
-                    <li><Link to="/Prompts" className={styles.navLink}>Dashboard</Link></li>
+                    <li><Link to="/home" className={styles.navLink}>AI Prompts</Link></li> {/* Active state */}
+                    <li><Link to="/Prompts" className={`${styles.navLink} ${styles.activeNavLink}`}>Dashboard</Link></li>
                     <li><Link to="/Matrix" className={styles.navLink}>Matrix</Link></li>
                     <li><Link to="/settings" className={styles.navLink}>Settings</Link></li>
                     <li><Link to="/profile" className={styles.navLink}>Profile</Link></li>

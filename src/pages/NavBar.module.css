@@ -2,7 +2,8 @@
     width: 100%;
     background-color: #000; /* Black background */
     font-family: 'Orbitron', sans-serif;
-    padding: 15px 40px;
+    padding-top: 15px ;
+    padding-bottom: 15px ;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -66,5 +67,31 @@
 /* Optional active link style */
 .activeNavLink {
     font-weight: bold;
-    border-bottom: 2px solid #FFD700;
+    border-bottom: 2px solid #FFF;
 }
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+    .navbarNav {
+        margin-top: 15px;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .navBrand {
+        font-size: 1.5em;
+
+    }
+
+}
+
+@media (max-width: 480px) {
+    .navLink {
+        font-size: 0.9em;
+        padding: 5px 10px;
+    }
+}
+

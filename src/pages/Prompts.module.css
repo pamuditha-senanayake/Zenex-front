@@ -326,3 +326,8 @@ body{
         padding: 15px 20px;
     }
 }
+
+.activeNavLink {
+    font-weight: bold;
+    border-bottom: 2px solid #FFF;
+}
