@@ -9,6 +9,8 @@ import NavBar from './pages/NavBar';
 import MQ from './pages/PhotoMarquee';
 import NavBarEisenhowerMatrix from './pages/EisenhowerMatrix';
 import Human6 from './pages/human_six/human6';
+import Sen from './pages/test/SentimentAnalyzer';
+import CryptoSentiment from './pages/test/CryptoSentiment';
 
 function App() {
     return (
@@ -23,6 +25,9 @@ function App() {
                 <Route path="/NavBar" element={<NavBar />} />
                 <Route path="/MQ" element={<MQ />} />
                 <Route path="/Human6" element={<Human6 />} />
+                <Route path="/Sen" element={<Sen />} />
+                <Route path="/crypto-sentiment" element={<CryptoSentiment />} />
+
             </Routes>
         </Router>
     );

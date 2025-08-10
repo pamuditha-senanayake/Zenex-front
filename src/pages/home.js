@@ -15,8 +15,8 @@ const siteLinks = [
     { name: 'ChatGPT', url: 'https://chat.openai.com/' },
     { name: 'Docs.new', url: 'https://docs.new' },
     { name: 'Sheets.new', url: 'https://sheets.new' },
-    { name: 'Figma', url: 'https://www.figma.com/' },
-    { name: 'Notion', url: 'https://www.notion.so/' }
+    { name: 'Crypto-price', url: '/crypto-sentiment' },
+    { name: 'Sentiment', url: '/Sen' }
     // { name: 'VS Code Online', url: 'https://vscode.dev/' },
     // { name: 'Canva', url: 'https://www.canva.com/' },
     // { name: 'Twitter (X)', url: 'https://twitter.com/' },
