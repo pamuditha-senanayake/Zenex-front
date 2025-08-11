@@ -12,7 +12,7 @@ const siteLinks = [
     { name: 'Lec 3', url: '/Prompts' },
     { name: 'AI studio', url: 'https://aistudio.google.com' },
     { name: 'Business Analysis', url: 'business-wisdom2' },
-    { name: 'Trading Analysis', url: 'business-wisdom1' },
+    { name: 'Trading Analysis', url: 'business-wisdom' },
     { name: 'Docs.new', url: 'https://docs.new' },
     { name: 'Sheets.new', url: 'https://sheets.new' },
     { name: 'Crypto-price', url: '/crypto-sentiment' },
