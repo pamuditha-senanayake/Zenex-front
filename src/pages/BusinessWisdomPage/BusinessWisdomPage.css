@@ -1,0 +1,356 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;700&family=Orbitron:wght@400;700;700&display=swap');
+
+/* Define CSS Variables for Colors and Fonts */
+:root {
+    --color-background: #1A1A1A; /* Dark almost black */
+    --color-surface: #2C2C2C;    /* Slightly lighter dark for cards/panels */
+    --color-text-primary: #E0E0E0; /* Off-white for main text */
+    --color-text-secondary: #A0A0A0; /* Lighter gray for labels/sub-text */
+    --color-highlight-yellow: #FFD700; /* Gold/Yellow for accents */
+    --color-error-red: #E53E3E; /* Standard red for failures */
+    --color-success-green: #38A169; /* Standard green for positive values */
+
+    --font-heading: 'Orbitron', sans-serif;
+    --font-body: 'Manrope', sans-serif;
+}
+
+/* Global Body Styles (apply these in your main index.css or equivalent if you want them project-wide) */
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    font-weight: 300; /* Light font weight for Manrope */
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Base Styles for the Page Container */
+.business-wisdom-page-container {
+    min-height: 100vh;
+    padding: 30px; /* Equivalent to p-6 */
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+/* Header Styles */
+.bw-header {
+    text-align: center;
+    margin-bottom: 40px; /* mb-10 equivalent */
+}
+
+.bw-header h1 {
+    font-family: var(--font-heading);
+    font-size: 3rem; /* 4xl equivalent */
+    font-weight: 700; /* extabold equivalent */
+    color: var(--color-highlight-yellow); /* Yellow for the main title */
+    margin-bottom: 8px; /* mb-2 equivalent */
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* Subtle glow */
+}
+
+.bw-header p {
+    font-size: 1.125rem; /* lg equivalent */
+    color: var(--color-text-secondary); /* Text-gray-600 equivalent */
+    font-weight: 300;
+}
+
+/* Section Styles */
+.bw-section {
+    margin-bottom: 40px; /* mb-10 equivalent */
+}
+
+.bw-section h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem; /* 2xl equivalent */
+    font-weight: 700; /* bold equivalent */
+    color: var(--color-text-primary);
+    margin-bottom: 16px; /* mb-4 equivalent */
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Footer Styles */
+.bw-footer {
+    text-align: center;
+    color: var(--color-text-secondary);
+    font-size: 0.875rem; /* sm equivalent */
+    margin-top: 40px; /* mt-10 equivalent */
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 215, 0, 0.1); /* Subtle yellow line */
+}
+
+.bw-footer p {
+    margin: 4px 0;
+}
+
+/* --- Parameter Controls Specific Styles --- */
+.param-controls-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 24px; /* gap-6 equivalent */
+    padding: 24px; /* p-6 equivalent */
+    background-color: var(--color-surface); /* bg-gray-50 equivalent */
+    border-radius: 8px; /* rounded-lg equivalent */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* shadow-inner equivalent */
+    border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.param-card {
+    background-color: #222; /* Slightly darker than surface for individual cards */
+    padding: 24px; /* p-4 equivalent */
+    border-radius: 8px; /* rounded-lg equivalent */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* shadow-md equivalent */
+    border: 1px solid rgba(255, 215, 0, 0.1); /* Subtle border */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.param-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(255, 215, 0, 0.2);
+}
+
+.param-label {
+    display: block;
+    font-size: 0.875rem; /* text-sm equivalent */
+    font-weight: 400; /* font-medium equivalent */
+    color: var(--color-text-secondary);
+    margin-bottom: 8px; /* mb-1 equivalent */
+}
+
+.param-input-group input[type="range"] {
+    width: 100%;
+    height: 6px; /* Thinner track */
+    background: var(--color-background); /* Darker track */
+    border-radius: 3px;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+.param-input-group input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: var(--color-highlight-yellow); /* Yellow thumb */
+    cursor: grab;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.3); /* Yellow glow */
+    transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.param-input-group input[type="range"]::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    background: var(--color-highlight-yellow); /* Yellow thumb */
+    cursor: grab;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.3); /* Yellow glow */
+    transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.param-input-group input[type="range"]:active::-webkit-slider-thumb {
+    cursor: grabbing;
+    box-shadow: 0 0 0 6px rgba(255, 215, 0, 0.5);
+}
+
+.param-input-group input[type="range"]:active::-moz-range-thumb {
+    cursor: grabbing;
+    box-shadow: 0 0 0 6px rgba(255, 215, 0, 0.5);
+}
+
+.param-input-group input[type="number"] {
+    width: 100%;
+    padding: 8px; /* p-2 equivalent */
+    border: 1px solid var(--color-text-secondary); /* Border color */
+    background-color: var(--color-background); /* Dark background */
+    color: var(--color-text-primary); /* Light text */
+    border-radius: 4px; /* rounded-md equivalent */
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    font-size: 0.875rem; /* text-sm equivalent */
+    margin-top: 8px; /* mt-2 equivalent */
+}
+
+.param-input-group input[type="number"]:focus {
+    border-color: var(--color-highlight-yellow);
+    box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.5); /* focus:ring-2 equivalent */
+}
+
+/* --- Summary Metrics Specific Styles --- */
+.summary-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px; /* gap-6 equivalent */
+    padding: 24px; /* p-6 equivalent */
+    background-color: var(--color-surface); /* bg-gray-50 equivalent */
+    border-radius: 8px; /* rounded-lg equivalent */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* shadow-inner equivalent */
+    border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.kpi-card {
+    background-color: #222; /* Slightly darker than surface */
+    padding: 24px; /* p-6 equivalent */
+    border-radius: 8px; /* rounded-lg equivalent */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* shadow-md equivalent */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.kpi-label {
+    font-size: 0.875rem; /* text-sm equivalent */
+    font-weight: 400; /* font-medium equivalent */
+    color: var(--color-text-secondary);
+    margin-bottom: 8px; /* mb-2 equivalent */
+}
+
+.kpi-value {
+    font-family: var(--font-heading); /* Orbitron for KPI values */
+    font-size: 2.25rem; /* 3xl equivalent */
+    font-weight: 700; /* bold equivalent */
+    color: var(--color-text-primary); /* Default for N/A or neutral */
+}
+
+.kpi-value.positive {
+    color: var(--color-success-green);
+}
+
+.kpi-value.negative {
+    color: var(--color-error-red);
+}
+
+.kpi-value.highlight {
+    color: var(--color-highlight-yellow); /* For final capital if positive */
+}
+
+/* --- Dashboard Charts Specific Styles --- */
+.dashboard-charts-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px; /* gap-6 equivalent */
+    padding: 24px; /* p-6 equivalent */
+    background-color: var(--color-surface); /* bg-white equivalent */
+    border-radius: 8px; /* rounded-lg equivalent */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* shadow-lg equivalent */
+    border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+@media (min-width: 1024px) { /* lg breakpoint */
+    .dashboard-charts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.chart-container {
+    padding: 20px; /* Adjust padding within chart area */
+    background-color: #222; /* Slightly darker background for the chart area */
+    border-radius: 8px;
+    border: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.chart-title {
+    font-family: var(--font-heading);
+    font-size: 1.25rem; /* xl equivalent */
+    font-weight: 700; /* semibold equivalent */
+    color: var(--color-text-primary);
+    margin-bottom: 16px; /* mb-4 equivalent */
+    text-align: center;
+}
+
+.failed-message {
+    color: var(--color-error-red);
+    font-weight: 700; /* bold equivalent */
+    text-align: center;
+    font-size: 1.125rem; /* lg equivalent */
+    margin-bottom: 16px; /* mb-4 equivalent */
+    font-family: var(--font-heading);
+    text-shadow: 0 0 5px rgba(229, 62, 62, 0.5);
+}
+
+/* Recharts specific styling overrides for dark theme */
+.recharts-wrapper {
+    background-color: transparent !important; /* Ensure chart background is transparent */
+}
+
+.recharts-surface {
+    background-color: transparent !important;
+}
+
+.recharts-cartesian-grid line {
+    stroke: rgba(255, 255, 255, 0.1); /* Lighter grid lines for dark background */
+}
+
+.recharts-x-axis .recharts-label,
+.recharts-y-axis .recharts-label {
+    fill: var(--color-text-secondary); /* Axis labels */
+    font-family: var(--font-body);
+    font-weight: 300;
+}
+
+.recharts-x-axis .recharts-cartesian-axis-tick-value,
+.recharts-y-axis .recharts-cartesian-axis-tick-value {
+    fill: var(--color-text-secondary); /* Tick values */
+    font-family: var(--font-body);
+    font-weight: 300;
+}
+
+.recharts-tooltip-wrapper {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    border: 1px solid var(--color-highlight-yellow) !important;
+    border-radius: 4px;
+    padding: 8px;
+    color: var(--color-text-primary) !important;
+    font-family: var(--font-body);
+    font-weight: 300;
+}
+
+.recharts-tooltip-label {
+    color: var(--color-highlight-yellow) !important;
+    font-family: var(--font-heading) !important;
+    font-weight: 400 !important;
+    margin-bottom: 4px;
+}
+
+.recharts-legend-item-text {
+    color: var(--color-text-primary) !important;
+    font-family: var(--font-body) !important;
+    font-weight: 300 !important;
+}
+
+.recharts-line {
+    /* Styles for the lines themselves defined in JS, but this could override */
+}
+
+/* Ensure consistent font application */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+}
+
+p, span, div, label, input {
+    font-family: var(--font-body);
+    font-weight: 300;
+}
+
+/* Specific for Navbar if you need to style it from here, otherwise manage in NavBar.css */
+/* For example, if NavBar also uses Orbitron/Manrope */
+.navbar-link { /* Example class, adjust as per your NavBar component */
+    font-family: var(--font-heading);
+    color: var(--color-text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+}
+
+.navbar-link:hover {
+    color: var(--color-highlight-yellow);
+}
