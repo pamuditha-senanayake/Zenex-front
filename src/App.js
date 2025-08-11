@@ -11,6 +11,9 @@ import NavBarEisenhowerMatrix from './pages/EisenhowerMatrix';
 import Human6 from './pages/human_six/human6';
 import Sen from './pages/test/SentimentAnalyzer';
 import CryptoSentiment from './pages/test/CryptoSentiment';
+import MomentsSolutions from './pages/human_six/MomentsSolutions';
+
+
 
 function App() {
     return (
@@ -27,7 +30,7 @@ function App() {
                 <Route path="/Human6" element={<Human6 />} />
                 <Route path="/Sen" element={<Sen />} />
                 <Route path="/crypto-sentiment" element={<CryptoSentiment />} />
-
+                <Route path="/MomentsSolutions" element={<MomentsSolutions />} />
             </Routes>
         </Router>
     );

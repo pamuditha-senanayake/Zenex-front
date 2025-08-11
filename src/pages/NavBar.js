@@ -35,7 +35,7 @@ const NavBar = () => {
                 </li>
                 <li>
                     <Link
-                        to="/human6"
+                        to="/MomentsSolutions"
                         className={`${styles.navLink} ${location.pathname === '/settings' ? styles.activeNavLink : ''}`}
                     >
                         Human 6.0
