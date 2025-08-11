@@ -12,6 +12,7 @@ import Human6 from './pages/human_six/human6';
 import Sen from './pages/test/SentimentAnalyzer';
 import CryptoSentiment from './pages/test/CryptoSentiment';
 import MomentsSolutions from './pages/human_six/MomentsSolutions';
+import ProblemLogPage from './pages/human_six/ProblemLogPage';
 
 
 
@@ -31,6 +32,8 @@ function App() {
                 <Route path="/Sen" element={<Sen />} />
                 <Route path="/crypto-sentiment" element={<CryptoSentiment />} />
                 <Route path="/MomentsSolutions" element={<MomentsSolutions />} />
+                <Route path="/log-problem/:momentId" element={<ProblemLogPage />} />
+                <Route path="/log-problem" element={<ProblemLogPage />} />
             </Routes>
         </Router>
     );

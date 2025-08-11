@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@100;400;700&family=Orbitron:wght@400;700;700&display=swap');
+
+/* CSS Variables for consistent theming */
+:root {
+    --color-bg-dark: #0a0a0a; /* Deep black for background */
+    --color-bg-container: #1a1a1a; /* Slightly lighter black for containers */
+    --color-text-primary: #e0e0e0; /* Off-white for general text */
+    --color-text-secondary: #aaaaaa; /* Lighter grey for subtle text */
+    --color-highlight-yellow: #fff066; /* Bright, vibrant yellow for highlights */
+    --color-accent-blue: #00bcd4; /* A techy, cyber blue/cyan */
+    --color-success: #4caf50; /* Standard green for success, still fits */
+    --color-warning: #ff9800; /* Standard orange for warnings */
+
+    --font-manrope: 'Manrope', sans-serif;
+    --font-orbitron: 'Orbitron', sans-serif;
+}
+
+/* General page layout */
+.pl-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--color-bg-dark); /* Dark background */
+    color: var(--color-text-primary); /* Light text */
+    font-family: var(--font-manrope);
+    font-weight: 100; /* Default Manrope weight for most text */
+    line-height: 1.6;
+}
+
+/* Ensure common text elements use Manrope 100 weight */
+.pl-page p,
+.pl-page li,
+.pl-page span,
+.pl-log-form input[type="text"],
+.pl-log-form textarea,
+.pl-log-item p {
+    font-weight: 100;
+}
+
+
+.pl-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: var(--color-bg-container); /* Darker container background */
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 188, 212, 0.2); /* Techy blue glow for containers */
+    flex-grow: 1;
+    border: 1px solid rgba(255, 255, 255, 0.08); /* Subtle border for definition */
+}
+
+.pl-title {
+    text-align: center;
+    color: var(--color-accent-blue); /* Techy blue for main titles */
+    margin-bottom: 30px;
+    font-size: 3em; /* Larger and more impactful */
+    font-weight: 700; /* Bold for Orbitron */
+    font-family: var(--font-orbitron);
+    text-shadow: 0 0 15px rgba(0, 188, 212, 0.7); /* Stronger glow effect */
+    letter-spacing: 2px; /* Add some spacing for futuristic feel */
+}
+
+/* Selected moment display */
+.pl-selected-moment {
+    background-color: rgba(0, 188, 212, 0.08); /* Transparent techy blue */
+    border: 1px solid var(--color-accent-blue);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 1.1em;
+    color: var(--color-text-primary);
+    box-shadow: 0 0 10px rgba(0, 188, 212, 0.15); /* Subtle glow */
+}
+
+.pl-selected-moment span {
+    font-weight: 700; /* Manrope bold for highlighted text */
+    color: var(--color-highlight-yellow); /* Yellow highlight */
+}
+
+.pl-warning {
+    background-color: rgba(255, 152, 0, 0.1); /* Transparent orange/yellow for warning background */
+    border: 1px solid var(--color-warning);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    color: var(--color-highlight-yellow); /* Yellow text for warnings */
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 152, 0, 0.2); /* Subtle orange glow */
+}
+
+/* Log form styling */
+.pl-log-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+    padding: 25px; /* Slightly more padding */
+    border: 1px solid rgba(0, 188, 212, 0.2); /* Subtle techy border */
+    border-radius: 8px;
+    background-color: var(--color-bg-dark); /* Form background same as page for sleekness */
+    box-shadow: inset 0 0 15px rgba(0, 188, 212, 0.1); /* Inner glow effect */
+}
+
+.pl-log-form label {
+    font-weight: 700; /* Manrope bold for labels */
+    margin-bottom: 5px;
+    color: var(--color-text-primary);
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 0.5px;
+}
+
+.pl-log-form input[type="text"],
+.pl-log-form textarea {
+    padding: 12px 18px; /* Slightly more padding */
+    border: 1px solid var(--color-accent-blue); /* Techy blue border */
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--color-bg-container); /* Dark input fields */
+    color: var(--color-text-primary); /* Light text */
+    font-family: var(--font-manrope);
+    outline: none; /* Remove default outline */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pl-log-form input[type="text"]:focus,
+.pl-log-form textarea:focus {
+    border-color: var(--color-highlight-yellow); /* Yellow border on focus */
+    box-shadow: 0 0 10px rgba(255, 235, 59, 0.6); /* Stronger yellow glow on focus */
+    background-color: rgba(26, 26, 26, 0.8); /* Slightly less opaque on focus */
+}
+
+.pl-log-form textarea {
+    min-height: 100px; /* Slightly taller textarea */
+    resize: vertical;
+}
+
+.pl-button {
+    background-color: var(--color-accent-blue); /* Techy blue button */
+    color: var(--color-bg-dark); /* Dark text on button */
+    padding: 14px 25px; /* Larger padding for buttons */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em; /* Larger font for buttons */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    align-self: flex-start;
+    font-family: var(--font-orbitron); /* Orbitron for buttons */
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 0 10px rgba(0, 188, 212, 0.4); /* Button glow */
+}
+
+.pl-button:hover {
+    background-color: var(--color-highlight-yellow); /* Yellow on hover */
+    color: var(--color-bg-dark); /* Dark text on yellow */
+    box-shadow: 0 0 20px rgba(255, 235, 59, 0.8); /* Stronger yellow glow on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.pl-button:disabled {
+    background-color: var(--color-text-secondary); /* Greyed out */
+    color: var(--color-bg-dark);
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none; /* Remove hover effect if disabled */
+}
+
+.pl-success-message {
+    color: var(--color-success); /* Green for success */
+    font-weight: 700; /* Manrope bold */
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+/* Summary and past logs sections */
+.pl-summary-section, .pl-past-logs {
+    margin-top: 40px;
+}
+
+.pl-summary-section h2, .pl-past-logs h2 {
+    color: var(--color-accent-blue); /* Techy blue for section titles */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.15); /* Subtle border */
+    padding-bottom: 12px;
+    margin-bottom: 25px;
+    font-size: 2.2em; /* Larger section titles */
+    font-family: var(--font-orbitron); /* Orbitron for section titles */
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
+    letter-spacing: 1px;
+}
+
+.pl-summary-section p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.pl-no-solution-list {
+    list-style-type: none; /* Remove default disc */
+    padding-left: 0; /* Remove default padding */
+    margin-top: 15px;
+}
+
+.pl-no-solution-list li::before {
+    content: ">> "; /* Custom tech-like bullet */
+    color: var(--color-highlight-yellow); /* Yellow bullet */
+    margin-right: 8px;
+    font-family: var(--font-orbitron); /* For the bullet as well */
+    font-weight: 400;
+}
+
+.pl-no-solution-list li {
+    background-color: rgba(255, 152, 0, 0.05); /* Very subtle transparent orange */
+    border: 1px solid var(--color-warning); /* Orange border */
+    padding: 12px 18px; /* More padding */
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: var(--color-text-primary);
+    box-shadow: 0 0 8px rgba(255, 152, 0, 0.1); /* Subtle orange glow */
+}
+
+.pl-log-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* More spacing between log items */
+}
+
+.pl-log-item {
+    background-color: var(--color-bg-dark); /* Dark background for log items */
+    border: 1px solid rgba(0, 188, 212, 0.2); /* Subtle techy blue border */
+    padding: 20px; /* More padding */
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 188, 212, 0.1); /* Subtle techy glow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pl-log-item:hover {
+    transform: translateY(-3px); /* Slight lift on hover */
+    box-shadow: 0 0 20px rgba(0, 188, 212, 0.3); /* Stronger glow on hover */
+}
+
+.pl-log-item p {
+    margin: 8px 0; /* More margin around paragraphs */
+    line-height: 1.7;
+}
+
+.pl-log-item p strong {
+    color: var(--color-accent-blue); /* Techy blue for strong text */
+    font-weight: 700; /* Manrope bold for emphasis */
+}
+
+/* Additions/modifications for MomentsSolutions.css (Existing page) */
+/* Assuming ms-button and ms-small are already defined with base styles */
+.ms-log-button {
+    background-color: var(--color-accent-blue); /* Techy blue for log button */
+    color: var(--color-bg-dark);
+    font-family: var(--font-orbitron);
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 10px 18px; /* Adjusted to fit typical button size */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    box-shadow: 0 0 8px rgba(0, 188, 212, 0.3);
+}
+
+.ms-log-button:hover {
+    background-color: var(--color-highlight-yellow); /* Yellow on hover */
+    color: var(--color-bg-dark);
+    box-shadow: 0 0 15px rgba(255, 235, 59, 0.7);
+}
+
+.ms-no-solution-tag {
+    background-color: var(--color-highlight-yellow); /* Yellow background */
+    color: var(--color-bg-dark); /* Dark text on yellow */
+    padding: 3px 10px; /* More padding */
+    border-radius: 4px;
+    font-size: 0.9em; /* Slightly larger */
+    font-weight: 700; /* Manrope bold */
+    margin-left: 8px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.ms-checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* More gap */
+    font-weight: 700; /* Manrope bold */
+    color: var(--color-text-primary);
+    margin-top: 15px; /* More margin */
+    font-size: 1.05em;
+}
+
+.ms-checkbox-label input[type="checkbox"] {
+    transform: scale(1.3); /* Make checkbox more prominent */
+    accent-color: var(--color-accent-blue); /* Color of the checkbox when checked */
+    background-color: var(--color-bg-dark); /* Background of unchecked checkbox */
+    border: 2px solid var(--color-accent-blue); /* Thicker border */
+    border-radius: 3px;
+    cursor: pointer;
+}
+.ms-checkbox-label input[type="checkbox"]:checked {
+    border-color: var(--color-highlight-yellow); /* Yellow border when checked */
+}
+
+/* Predictions Section */
+.ms-predictions-section {
+    background-color: rgba(76, 175, 80, 0.08); /* Transparent green for alerts section */
+    border: 1px solid var(--color-success); /* Green border */
+    padding: 25px; /* More padding */
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.25); /* Stronger green glow */
+}
+
+.ms-predictions-section h2 {
+    color: var(--color-success); /* Green for prediction title */
+    margin-bottom: 20px;
+    font-size: 2.2em;
+    font-family: var(--font-orbitron);
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+    letter-spacing: 1px;
+}
+
+.ms-prediction-alert {
+    background-color: var(--color-bg-container); /* Dark background for alert items */
+    border: 1px solid var(--color-success); /* Green border */
+    color: var(--color-text-primary);
+    padding: 18px; /* More padding */
+    border-radius: 8px;
+    margin-bottom: 12px; /* More spacing */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.05em;
+    flex-wrap: wrap;
+    font-weight: 100; /* Manrope 100 */
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.15); /* Subtle green glow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ms-prediction-alert:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.3);
+}
+
+.ms-prediction-alert p {
+    margin: 0;
+    flex-basis: 70%;
+}
+
+.ms-prediction-alert .ms-button { /* Assuming this refers to a generic button class used here */
+    flex-basis: auto;
+    background-color: var(--color-success); /* Green button for prediction actions */
+    color: var(--color-bg-dark);
+    font-family: var(--font-orbitron);
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 8px 15px; /* Smaller button inside alert */
+    font-size: 0.9em;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+}
+
+.ms-prediction-alert .ms-button:hover {
+    background-color: var(--color-highlight-yellow); /* Yellow on hover */
+    color: var(--color-bg-dark);
+    box-shadow: 0 0 12px rgba(255, 235, 59, 0.7);
+}
